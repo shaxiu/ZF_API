@@ -8,7 +8,7 @@
 
 - [**查询已选课程**](#yxkc)
 - [**搜索课程**](#sskc)
-- **显示课程具体信息**
+- [**查询课程具体信息**](#jtxx)
 - **选课**
 - **退课**
 ----------------------------------------------------------------------------------------------------------
@@ -176,7 +176,10 @@ https://jwgl.XXXX.edu.cn/xsxk/zzxkyzb_cxZzxkYzbPartDisplay.html?gnmkdm=N253512&s
 | `xkzgbj`       | 0                                |                                |                     |
 | `jxbzb`        |                                  |                                |                     |
 
+<span id="sxcs">**筛选参数**</span>
+
 下列参数为与搜索筛选相关的参数，单独列出
+
 | 变量名            | 值   | 注释         | 是否必须 |
 | ----------------- | ---- | ------------ | -------- |
 | `filter_list[0]`  | XXX  | 搜索内容     |          |
@@ -258,4 +261,119 @@ https://jwgl.XXXX.edu.cn/xsxk/zzxkyzb_cxZzxkYzbPartDisplay.html?gnmkdm=N253512&s
   ],......
   "sfxsjc": "0"
 }
+```
+----------------------------------------------------------------------------------------------------------
+### <span id="jtxx">查询课程具体信息</span>
+
+**请求方式**：`POST`
+
+**请求接口**：
+
+```
+https://jwgl.XXXX.edu.cn/xsxk/zzxkyzbjk_cxJxbWithKchZzxkYzb.html?gnmkdm=N253512&su=学号
+```
+
+**请求头**:
+
+`Cookie:JSESSIONID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+
+**请求参数**：
+
+| 变量名         | 值                               | 注释                                                         | 是否必须 |
+| -------------- | -------------------------------- | ------------------------------------------------------------ | -------- |
+| `bklx_id`      | 0                                | 定值                                                         | ✓        |
+| `njdm_id`      | 2019                             | 年级代码                                                     | ✓        |
+| `xkxnm`        | 2021                             | 当前学期年份如2021-2022 即2021                               | ✓        |
+| `xkxqm`        | 12                               | 定值                                                         | ✓        |
+| `kklxdm`       | 10                               | `10`为选修课` 01`为主修课                                    | ✓        |
+| `kch_id`       | XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX | 课程号                                                       | ✓        |
+| `xkkz_id`      | D8243C19A3C0239AE0530264A8C00F27 | 为该值时为选修课，为D7C92C5210262DD6E0530264A8C060A3时为主修 | ✓        |
+| `rwlx`         | 2                                |                                                              |          |
+| `xkly`         | 0                                |                                                              |          |
+| `sfkkjyxdxnxq` | 0                                |                                                              |          |
+| `xqh_id`       | 1                                |                                                              |          |
+| `jg_id`        | 14                               | 学院代号                                                     |          |
+| `zyh_id`       | 1401                             | 专业代号                                                     |          |
+| `zyfx_id`      | wfx                              |                                                              |          |
+| `bh_id`        | XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX |                                                              |          |
+| `xbm`          | 1                                |                                                              |          |
+| `xslbdm`       | 421                              |                                                              |          |
+| `ccdm`         | 3                                |                                                              |          |
+| `xsbj`         | 4294967296                       |                                                              |          |
+| `sfkknj`       | 0                                |                                                              |          |
+| `sfkkzy`       | 0                                |                                                              |          |
+| `kzybkxy`      | 0                                |                                                              |          |
+| `sfznkx`       | 0                                |                                                              |          |
+| `zdkxms`       | 0                                |                                                              |          |
+| `sfkxq`        | 0                                |                                                              |          |
+| `sfkcfx`       | 0                                |                                                              |          |
+| `kkbk`         | 0                                |                                                              |          |
+| `kkbkdj`       | 0                                |                                                              |          |
+| `xkxskcgskg`   | 1                                |                                                              |          |
+| `rlkz`         | 0                                |                                                              |          |
+| `jxbzcxskg`    | 0                                |                                                              |          |
+| `cxbj`         | 0                                |                                                              |          |
+| `fxbj`         | 0                                |                                                              |          |
+
+该接口依旧支持筛选参数，具体见[筛选参数](#sxcs)
+
+**返回数据** 
+
+接口返回搜索课程的具体信息数据
+
+数据示例如下(参数太多了，就不做注释了，自行领悟)
+
+```json
+[
+  {
+    "date": "二○二二年二月十九日",
+    "dateDigit": "2022年2月19日",
+    "dateDigitSeparator": "2022-2-19",
+    "day": "19",
+    "do_jxb_id": "7c93190fd246f7a9554c114a516f4ca4531df8385ce293448f6c5ae1a2e48556f3495fec2d10747850fd9d0c2f397e8a7e979417889f2e855f27b0c4461c69e301521a98be59409017c914a3530d4844c0b4fa6a162f3c17275a6c640030e38d5806de29591540abde87dcbff3c2d81bbb54c2aa648312147eaa03bbe4f3033e",
+    "fxbj": "0",
+    "jgpxzd": "1",
+    "jsxx": "290656/视频课教师/无",
+    "jxb_id": "D5F8D5F8D5F8D5F8D5F8D5F8D5F8D5F8",
+    "jxbrl": "2000",
+    "jxdd": "--",
+    "jxms": "中文教学",
+    "kclbmc": "通识教育课",
+    "kcxzmc": "选修",
+    "kkxymc": "教务处",
+    "listnav": "false",
+    "localeKey": "zh_CN",
+    "month": "2",
+    "pageable": true,
+    "queryModel": {
+      "currentPage": 1,
+      "currentResult": 0,
+      "entityOrField": false,
+      "limit": 15,
+      "offset": 0,
+      "pageNo": 0,
+      "pageSize": 15,
+      "showCount": 10,
+      "sorts": [],
+      "totalCount": 0,
+      "totalPage": 0,
+      "totalResult": 0
+    },
+    "rangeable": true,
+    "sksj": "--",
+    "totalResult": "0",
+    "userModel": {
+      "monitor": false,
+      "roleCount": 0,
+      "roleKeys": "",
+      "roleValues": "",
+      "status": 0,
+      "usable": false
+    },
+    "xqh_id": "1",
+    "xqumc": "江浦校区",
+    "year": "2022",
+    "yqmc": "--"
+  }
+]
 ```
