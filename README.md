@@ -400,6 +400,8 @@ https://jwgl.XXXX.edu.cn/xsxk/zzxkyzbjk_xkBcZyZzxkYzb.html?gnmkdm=N253512&su=学
 | `jxb_ids` | 7cad8a50a08b2c9...(共257个字符)                           | 教学班号（动态刷新）           | ✓        |
 | `kch_id`  | 45C16EB07F0B1AC3E0530264A8C024C7                          | 课程号                         | ✓        |
 | `qz`      | 0                                                         | 定值                           | ✓        |
+| `njdm_id` | 2019                                                      |年级代码(若选课对年级有要求则需要,大部分主修课有要求) |主修课：✓ 选修课：✗|
+| `zyh_id`  | 1401                                                      |专业代码(若选课对专业有要求则需要,大部分主修课有要求) |主修课：✓ 选修课：✗|
 | `kcmc`    | (SBA100082)【尔雅视频】创业实训（大学生创业基础）-2.0学分 | 课程名称                       |          |
 | `rwlx`    | 1                                                         |                                |          |
 | `rlkz`    | 0                                                         |                                |          |
@@ -408,8 +410,6 @@ https://jwgl.XXXX.edu.cn/xsxk/zzxkyzbjk_xkBcZyZzxkYzb.html?gnmkdm=N253512&su=学
 | `xxkbj`   | 0                                                         |                                |          |
 | `cxbj`    | 0                                                         |                                |          |
 | `xkkz_id` | D824D824D824D824D824D824D824D824                          | 与年级，主修课还是选修课相对应 |          |
-| `njdm_id` | 2019                                                      |                                |          |
-| `zyh_id`  | 1401                                                      |                                |          |
 | `xklc`    | 1                                                         |                                |          |
 | `xkxnm`   | 2021                                                      |                                |          |
 | `xkxqm`   | 12                                                        |                                |          |
